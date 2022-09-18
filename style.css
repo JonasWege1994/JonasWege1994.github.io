@@ -1,0 +1,419 @@
+@font-face {
+    font-family: 'Ingriana';
+    src: url(fonts/IngrianaCasual_BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Quickpen';
+    src: url(fonts/Trial\ by\ Cupcakes\ -\ Quickpen.otf);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding:0;
+    background-image: url(img/background1.jpg);
+    background-size: cover;
+    background-repeat:repeat-y ;
+    display:block;
+}
+#belowNavbar{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    width:100%;
+}
+
+/*Fotos für die verschiedenen Seiten*/
+
+#FotoDoroJonas{
+    display: flex;
+    position: relative; 
+    background-image:url(img/DoroJonas.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    -webkit-mask-image:-webkit-gradient(linear, left center , left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 550px;
+    background-repeat: none;
+    transform: scaleX(-1); 
+}
+#FotoLocation{
+    display: flex;
+    position: relative; 
+    background-image:url(img/Location.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    -webkit-mask-image:-webkit-gradient(linear, left center , left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 550px;
+    background-repeat: none; 
+}
+#FotoÜbernachtung{
+    display: flex;
+    position: relative; 
+    background-image:url(img/Übernachtung.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    -webkit-mask-image:-webkit-gradient(linear, left center , left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    height: 550px;
+    background-repeat: none; 
+}
+
+
+/*Media Query zur Anpassung der Bilder*/
+
+@media screen and (max-width:600px){
+    #FotoDoroJonas{
+        background-image:url(img/DoroJonas_narrower.jpg); 
+        height: 450px;
+        background-repeat: none;
+        transform: scaleX(-1);
+    }
+
+    #FotoLocation{
+        background-image:url(img/Location_narrow.jpg); 
+        height: 450px;
+        background-repeat: none;
+    }
+
+    #FotoÜbernachtung{
+        background-image:url(img/Übernachtung_narrow.jpg); 
+        height: 450px;
+        background-repeat: none;
+    }
+}
+
+
+    
+.navbar{
+    display:flex;
+    background:rgba(250, 245, 216, 0.795);
+    color:rgb(121, 88, 7);
+    font-family: 'Quickpen';
+    flex-direction: column;
+    align-items: flex-start;
+    position:relative;
+    z-index: 10;
+    
+}
+
+
+.Titel{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links ul{
+   
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.navbar-links {
+    display: none;
+    width:100%;
+}
+   
+.navbar-links.active{
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+    text-align: center;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    padding: 1rem;
+    color:rgb(97, 71, 6);
+    display: block;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+}
+
+.navbar-links li:hover{
+    background-color: rgba(165, 128, 28, 0.253);
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(121, 88, 7);;
+    border-radius: 10px;
+}
+
+
+.Header{
+    font-family: 'Quickpen';
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-top: -18%;
+    z-index:10;
+    gap:20px;
+}
+
+.HeaderHome{
+    font-family: 'Quickpen';
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: -18%;
+    z-index:10;
+}
+
+.HeaderIcon{
+    display:flex;
+    align-content: center;
+}
+
+
+#ThankyouBox{
+    padding:10%;
+    font-size:1.5rem;
+    position:fixed;
+    top: 12%;
+    z-index: 10;
+    background-color:rgba(255, 255, 255, 0.712);
+    height: 150px;
+    max-width: 80vw;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align:center;
+    align-content: center;
+    justify-content: center;
+    gap: 10%;
+    border-radius: 10px;
+    font-family: 'Quickpen';
+    transform: scaleY(1);
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.473);
+}
+
+#ThankyouButton{
+    width: 50%;
+    align-self: center;
+    height: auto;
+    padding:2%;
+    border-radius: 5px;
+}
+
+/*Main Text formatting*/
+
+.WebsiteText{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.TextBlock{
+    padding:5%;
+    justify-items: center;
+    text-align: center;
+    font-family:'Ingriana';
+}
+
+.TextBlock a{
+    color: black;
+}
+
+.HomeTextBlock1{
+    margin-top:7.352%;
+    padding:1%;
+    justify-items: left;
+    text-align: left;
+    font-family:'Quickpen';
+    font-size:1.4rem;
+}
+
+.HomeTextBlock2{
+    padding:1%;
+    justify-items: right;
+    text-align: right;
+    font-family:'Quickpen';
+    font-size:1.4rem;
+}
+
+.HomeTextBlock3{
+    padding:10%;
+    justify-items: center;
+    text-align: center;
+    font-family:'Quickpen';
+    font-size:0.8rem;
+}
+
+
+/*Ablauf Formatierung*/
+
+.AblaufTagÜberschrift{
+    display:flex;
+    padding:5%;
+    justify-content: center;
+    text-align: center;
+    font-family:'Quickpen';
+    align-items: center;
+    font-family: 'Quickpen';
+    font-size:2rem;
+    font-weight: bold;
+}
+
+.AblaufFreitag{
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "icon event"
+    "icon event"
+    "icon event";
+    padding-bottom:100px;
+    grid-row-gap: 15px;
+}
+
+.AblaufSamstag{
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "icon event"
+    "icon event"
+    "icon event"
+    "icon event"
+    "icon event";
+    padding-bottom:100px;
+    grid-row-gap: 15px;
+}
+
+.AblaufSonntag{
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "icon event"
+    "icon event"
+    "icon event";
+    padding-bottom:100px;
+    grid-row-gap: 15px;
+}
+
+
+.icon{
+    justify-content: center;
+    display: flex;   
+    align-items: center;
+}
+
+.event{
+    justify-content: left;
+    display: flex;   
+    align-items: center;
+    font-family: 'Quickpen';
+    font-size:1.3rem;
+}
+
+
+
+/*Location Formatierung*/
+#MapArea{
+    display: flex;
+    justify-content: center;
+}
+
+#map{
+    padding:0;
+    margin:0;
+    height:500px;
+    width:80%;
+    border: 5px solid black;
+}
+
+
+
+/*Footer Mess*/
+
+.footer{
+    padding:5%;
+    box-sizing: border-box;
+    height:auto;
+    position:relative;
+    bottom:0;
+    width:100%;
+    background:rgba(250, 245, 216, 0.795);
+    color:rgb(121, 88, 7);
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.FooterBlock{
+    box-sizing: border-box;
+    display:flex;
+    width:auto;
+    justify-content: center;
+
+}
+
+.FooterBlock a{
+    color: rgb(121, 88, 7);
+}
+
+.FooterBlockContacts{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 100px;
+}
+
+.FooterContactName{
+    width:auto;
+    display:flex;
+    padding-left:5%;
+    align-items: center;
+
+}
+
+.FooterContactInfo{
+    align-items: left;
+    display:flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.FooterContactInfoLine{
+    gap: 10px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}

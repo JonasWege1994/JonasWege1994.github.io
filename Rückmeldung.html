@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rückmeldung Hochzeit Doro und Jonas</title>
+    <link rel="stylesheet" href="StyleRückmeldung.css">
+
+</head>
+<body>
+    <nav class ="navbar">
+        <div class="Titel" id="Titel">Hochzeit Doro & Jonas</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Allgemeines.html">Allgemeines</a></li>
+                <li><a href="Location.html">Location</a></li>
+                <li><a href="Übernachtung.html">Übernachtung</a></li>
+                <li><a href="Ablauf.html">Ablauf</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Überschrift">Rückmeldeformular</div>
+    
+    
+    <form action="processform.php" method="post" class="form" id="myForm" name="myForm" onkeydown="return event.key != 'Enter';">
+        
+        <div class="Fragebox">
+            <div class="Textbox"> Bitte Namen oder Familiennamen eintragen: </div>
+            <input type="text" id="Name" name="Name">
+        </div>
+        
+        <div class="Fragebox">
+            <div class="Textbox"> Wir kommen zur Hochzeit:</div>
+            <div class="Option">
+                <input type="radio" name="RSVP" id="Zusage" value="1">
+                <label for="Zusage" class="radio">Ja, das lassen wir uns nicht entgehen!</label>
+            </div>
+            <div class="Option">
+                <input type="radio" name="RSVP" id="Absage" value="0">
+                <label for="Absage" class="radio">Nein, wir können leider nicht.</label>
+            </div>
+        </div>
+        
+        <div class="Anzahlbox">
+            <div class="Textbox"> Wir kommen mit  </div> 
+            <input type="number" id="AnzahlGäste" name="AnzahlGäste">
+            <div class="Textbox"> Personen</div>
+        </div>
+        
+        <div class="Fragebox">
+            <div class="Textbox"> An welchen Tagen wollt ihr mit uns feiern?</div>
+            <div class="Option">
+                <input type="hidden" name="ZusageFreitag" value = "0">
+                <input type="checkbox" id="ZusageFreitag" name="ZusageFreitag" value = "1">
+                <label for="ZusageFreitag"> Freitag, den 30.06.23</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="ZusageSamstag" value = "0">
+                <input type="checkbox" id="ZusageSamstag" name="ZusageSamstag" value="1">
+                <label for="ZusageSamstag"> Samstag, den 01.07.23</label>
+            </div>
+        </div>
+        
+        <div class="Fragebox">
+            <div class="Textbox"> Wir möchten Folgendes zum Buffet beitragen: </div>
+            <div class="Option">
+                <input type="hidden" name="KuchenTorte" value = "0">
+                <input type="checkbox" id="KuchenTorte" name="KuchenTorte" value="1">
+                <label for="KuchenTorte"> Kuchen/Torte</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="Salat" value = "0">
+                <input type="checkbox" id="Salat" name="Salat" value="1">
+                <label for="Salat"> Salat</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="Fingerfood" value = "0">
+                <input type="checkbox" id="Fingerfood" name="Fingerfood" value="1">
+                <label for="Fingerfood"> Fingerfood</label>
+            </div>
+            <div class="Option">
+                <input type="checkbox" id="CheckboxSonstiges">
+                <input type="text" name="TextSonstiges" id="TextSonstiges">
+            </div>
+        </div>
+        
+        <div class="Fragebox">
+            <div class="Textbox"> Welche Übernachtungsmöglichkeit wollt ihr gerne nutzen? </div>
+            <div class="Option">
+                <input type="hidden" name="KeineÜbernachtung" value = "0">
+                <input type="checkbox" id="KeineÜbernachtung" name="KeineÜbernachtung" value="1">
+                <label for="KeineÜbernachtung"> Wir benötigen keine Übernachtungsmöglichkeit</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="ÜbernachtungFreitag" value = "0">
+                <input type="checkbox" id="ÜbernachtungFreitag" name="ÜbernachtungFreitag" value="1">
+                <label for="ÜbernachtungFreitag"> Wir möchten von Freitag auf Samstag übernachten</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="ÜbernachtungSamstag" value = "0">
+                <input type="checkbox" id="ÜbernachtungSamstag" name="ÜbernachtungSamstag" value="1">
+                <label for="ÜbernachtungSamstag"> Wir möchten von Samstag auf Sonntag übernachten</label>
+            </div>
+            <div class="Option">
+                <input type="hidden" name="ÜbernachtungZelt" value = "0">
+                <input type="checkbox" id="ÜbernachtungZelt" name="ÜbernachtungZelt" value="1">
+                <label for="ÜbernachtungZelt"> Wir bringen ein Zelt für die Übernachtung mit</label>
+            </div>
+        </div>
+        
+        <div class="ButtonArea">
+        <Button type="submit" id="SubmitButton">Rückmeldung absenden</Button>
+        </div>
+
+    </form>
+
+    <script src="scriptRückmeldung.js"></script>
+</body>
+
+</html>

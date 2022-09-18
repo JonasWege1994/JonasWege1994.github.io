@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Miama';
+    src: url(fonts/Miama.otf);
+}
+@font-face {
+    font-family: 'Ingriana';
+    src: url(fonts/IngrianaCasual_BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Quickpen';
+    src: url(fonts/Trial\ by\ Cupcakes\ -\ Quickpen.otf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    background-image: url(img/background1.jpg);
+    background-size: cover;
+    background-repeat:repeat-y;
+    font-family: 'Quickpen';
+}
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(250, 245, 216, 0.795);
+    color:rgb(121, 88, 7);
+    font-family: 'Quickpen';
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Überschrift{
+    padding:2%;
+    font-size: 2rem;
+    font-family: 'Quickpen';
+    justify-content: center;
+    display: flex;
+    
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ingriana';
+    
+}
+
+.Titel{
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-family: 'Quickpen';
+}
+
+.navbar-links {
+    display: none;
+    width:100%;
+}
+    
+
+.navbar-links.active{
+    display: flex;
+}
+
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    font-family: 'Quickpen';
+}
+
+.navbar-links li{
+    list-style: none;
+    text-align: center;
+}
+    
+
+.navbar-links li a{
+    text-decoration: none;
+    padding: 1rem;
+    color:rgb(97, 71, 6);
+    display: block;
+    padding: .5rem 1rem;
+}
+
+.navbar-links li:hover{
+    background-color: rgba(240, 231, 183, 0.418);
+}
+
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(121, 88, 7);;
+    border-radius: 10px;
+}
+
+.Fragebox{
+    font-family: 'Ingriana';
+    font-size: 1.4rem;
+    margin: 2%;
+    padding: 2%;
+    background-color: rgba(236, 226, 203, 0.356);
+    border-radius: 5px;
+   
+}
+.Fragebox .Textbox{
+    margin-bottom: 3%;
+}
+.Fragebox label{
+    font-size: 1.2rem;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+.Fragebox .Option{
+    display: flex;
+    gap:5%;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+.Anzahlbox{
+    font-family: 'Ingriana';
+    font-size: 1.4rem;
+    margin: 2%;
+    padding: 2%;
+    background-color: rgba(236, 226, 203, 0.356);
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    text-align: center;
+}
+
+.Anzahlbox .Textbox{
+    margin-bottom: 2%;
+    width:auto;
+    display: flex;
+    align-content: center;
+}
+
+.Anzahlbox label{
+    font-size: 1.2rem;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+
+#Name{
+    width:80% ;
+    margin-left: 5%;
+    margin-right: auto;
+    height:auto;
+    padding: 2%;  
+    font-size: 1.2rem;
+    border-radius: 5px;
+    box-shadow: inset 0px 1px 1px black; 
+}
+
+#AnzahlGäste{
+    width:70px ;
+    margin-left: 20px;
+    margin-right: 20px;
+    height:auto;
+    border-radius: 5px;
+    padding: 2%;
+    font-size: 1.2rem;
+    box-shadow: inset 0px 1px 1px black; 
+}
+
+#TextSonstiges{
+    width:80% ;
+    margin-right: 20px;
+    height:auto;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 2%;
+    box-shadow: inset 0px 1px 1px black; 
+}
+
+.ButtonArea{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5%;
+    margin:2%;
+    background-color: rgba(236, 226, 203, 0.356);
+}
+#SubmitButton{
+    height: 70px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 6px 3px 3px black;
+    background:rgba(143, 126, 32, 0.534);
+    font-family:'Quickpen';
+    font-size: 1.3rem;
+}
+
+
